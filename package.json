@@ -1,0 +1,71 @@
+{
+  "name": "react-hook-form-website",
+  "description": "React hooks for form validation without the hassle.",
+  "version": "6.0.1",
+  "author": "beier luo",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "export": "next export",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix"
+  },
+  "dependencies": {
+    "@hookform/devtools": "2.0.0-beta.1",
+    "little-state-machine": "3.0.1",
+    "prismjs": "^1.21.0",
+    "ptz-i18n": "^1.0.0",
+    "next": "^10.0.1",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-github-btn": "1.2.0",
+    "react-helmet": "5.2.1",
+    "react-hook-form": "6.0.0-rc.1",
+    "react-simple-animate": "^3.3.9",
+    "react-simple-img": "2.3.7",
+    "react-sortablejs": "1.5.1",
+    "sortablejs": "1.10.2"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-typescript": "^7.10.4",
+    "@next/bundle-analyzer": "^10.0.1",
+    "@types/node": "^14.11.8",
+    "@types/prismjs": "^1.16.2",
+    "@types/react": "^16.9.52",
+    "@types/react-dom": "^16.9.8",
+    "@typescript-eslint/eslint-plugin": "^4.4.0",
+    "@typescript-eslint/parser": "^4.4.0",
+    "babel-plugin-styled-components": "^1.11.1",
+    "eslint": "^7.11.0",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.21.4",
+    "eslint-plugin-react-hooks": "^4.1.2",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.4.0",
+    "prettier": "^2.1.2",
+    "styled-components": "^5.2.0",
+    "typescript": "^4.0.3"
+  },
+  "keywords": [
+    "react-hook-form",
+    "form-validation"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/react-hook-form/documentation-nextjs"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "npm run lint"
+    ]
+  }
+}
