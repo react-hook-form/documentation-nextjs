@@ -1,5 +1,26 @@
-const Home = () => {
-  return <div>init commit??</div>
-}
+import { i18n, withTranslation } from "../i18n"
 
-export default Home
+const namespaces = { common: "common" }
+
+const Homepage = ({ t }) => (
+  <>
+    <main>
+      <div>
+        <button
+          type="button"
+          onClick={() =>
+            i18n.changeLanguage(i18n.language === "en" ? "de" : "en")
+          }
+        >
+          {t("hello")}
+        </button>
+      </div>
+    </main>
+  </>
+)
+
+Homepage.getInitialProps = async () => ({
+  namespacesRequired: [Object.values(namespaces)],
+})
+
+export default withTranslation("common")(Homepage)
