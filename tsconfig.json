@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "typeRoots": ["./node_modules/@types", "./custom_typings"]
   },
-  "include": ["next-env.d.ts","styled-components.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "styled-components.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
 }
