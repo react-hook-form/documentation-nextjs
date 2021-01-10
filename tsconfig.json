@@ -13,7 +13,11 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "typeRoots": ["./node_modules/@types", "./custom_typings"]
+    "typeRoots": ["./node_modules/@types", "./custom_typings"],
+    "baseUrl": ".", // Set the base location for the paths to look for
+    "paths": {
+      "~i18n": ["./i18n.ts"]
+    }
   },
   "include": ["next-env.d.ts", "styled-components.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]

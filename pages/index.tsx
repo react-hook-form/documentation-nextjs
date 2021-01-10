@@ -1,4 +1,4 @@
-import { i18n, withTranslation } from "../i18n"
+import { i18n, withTranslation } from "~i18n"
 
 const namespaces = { common: "common" }
 

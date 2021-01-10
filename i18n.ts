@@ -1,12 +1,14 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-const NextI18Next = require("next-i18next").default
-const { localeSubpaths } = require("next/config").default().publicRuntimeConfig
-const path = require("path")
+import _ from "lodash/fp"
+import NextI18Next from "next-i18next"
+import getNextConfig from "next/config"
+import path from "path"
+
+const nextConfig = getNextConfig()
 
 const NextI18NextInstance = new NextI18Next({
   defaultLanguage: "en",
   otherLanguages: ["de"],
-  localeSubpaths,
+  localeSubpaths: _.get("publicRuntimeConfig.localeSubpaths", nextConfig),
   localePath: path.resolve("./public/static/locales"),
 })
 
