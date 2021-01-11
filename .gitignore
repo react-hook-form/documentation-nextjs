@@ -1,0 +1,12 @@
+# dependencies
+/node_modules
+
+# production
+.next
+/out
+
+# secrets
+.env
+
+# misc
+.DS_Store
