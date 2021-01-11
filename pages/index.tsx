@@ -1,4 +1,5 @@
 import { i18n, withTranslation } from "~i18n"
+import { getTranslatedText } from "../utils/homeTranslation"
 
 const namespaces = { common: "common" }
 
@@ -15,6 +16,7 @@ const Homepage = ({ t }) => {
           >
             {t("hello")}
           </button>
+          <span>{getTranslatedText(i18n.language, "tree")}</span>
         </div>
       </main>
     </>

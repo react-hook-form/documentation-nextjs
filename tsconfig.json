@@ -14,9 +14,10 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "typeRoots": ["./node_modules/@types", "./custom_typings"],
-    "baseUrl": ".", // Set the base location for the paths to look for
+    // Set the base location for the paths to look for
+    "baseUrl": ".",
     "paths": {
-      "~i18n": ["./i18n.ts"]
+      "~i18n": ["./i18n.ts"],
     }
   },
   "include": ["next-env.d.ts", "styled-components.d.ts", "**/*.ts", "**/*.tsx"],
