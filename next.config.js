@@ -1,11 +1,9 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-const { nextI18NextRewrites } = require("next-i18next/rewrites")
+const nextTranslate = require("next-translate")
 
-const localeSubpaths = { en: "en", de: "de" }
-
-module.exports = {
-  rewrites: async () => nextI18NextRewrites(localeSubpaths),
-  publicRuntimeConfig: {
-    localeSubpaths,
+module.exports = nextTranslate({
+  i18n: {
+    locales: ["en", "es", "jp", "kr", "pt", "ru", "zh"],
+    defaultLocale: "en",
   },
-}
+})
